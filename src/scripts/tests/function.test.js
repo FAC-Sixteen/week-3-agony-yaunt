@@ -1,5 +1,6 @@
 const test = require('tape');
 const yodariser = require('../functions/yodariser.js');
+const getAdviceApi = require("../functions/get-advice-api.js");
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 const dummyAdvice = "Burn the spreadsheets";
@@ -19,10 +20,16 @@ test("Testing yodariser", function (t) {
 //     t.end();
 // });
 
-test("Function returns a url", function(t) {
+test("Yodarise function returns a url", function(t) {
     const actual = yodariser(dummyAdvice);
     const expected = "http://yoda-api.appspot.com/api/v1/yodish?text=Burn%20the%20spreadsheets";
     t.equal(actual,expected, "Quote is formatted");
     t.end();
 });
 
+test("Test advice function", t => {
+  const actual = getAdviceApi("");
+  const expected = "string";
+  t.equal(actual, expected, "function should fetch a string from the api");
+  t.end();
+});
