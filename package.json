@@ -1,0 +1,19 @@
+{
+  "name": "agony-yaunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dom.js",
+  "scripts": {
+    "test": "nodemon ./src/scripts/tests/*.test.js | tap-spec",
+    "coverage": "istanbul cover ./src/scripts/tests/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.18.10",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.10.1"
+  }
+}
