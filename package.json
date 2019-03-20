@@ -4,7 +4,7 @@
   "description": "",
   "main": "dom.js",
   "scripts": {
-    "test": "nodemon ./src/scripts/tests/*.test.js | tap-spec",
+    "test": "tape ./src/scripts/tests/*.test.js | tap-spec",
     "coverage": "istanbul cover ./src/scripts/tests/*.test.js"
   },
   "keywords": [],
