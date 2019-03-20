@@ -2,7 +2,7 @@
   "name": "agony-yaunt",
   "version": "1.0.0",
   "description": "",
-  "main": "dom.js",
+  "main": "./src/scripts/functions/dom.js",
   "scripts": {
     "test": "nodemon ./src/scripts/tests/*.test.js | tap-spec",
     "coverage": "istanbul cover ./src/scripts/tests/*.test.js"
@@ -14,6 +14,7 @@
     "istanbul": "^0.4.5",
     "nodemon": "^1.18.10",
     "tap-spec": "^5.0.0",
-    "tape": "^4.10.1"
+    "tape": "^4.10.1",
+    "xmlhttprequest": "^1.8.0"
   }
 }
