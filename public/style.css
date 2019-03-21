@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 @font-face {
 font-family: "StarWarsFont";
 src: url("./assets/Starjhol.ttf");
 }
+
+
 
 body {
   display: flex;
@@ -78,8 +87,81 @@ header h2 {
     transform: perspective(400px) translateY(-60%) translateZ(-400px) rotateX(45deg);
   }
 }
+.form__section {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  height: 5vh;
+  margin: 0 1vh;
+  padding: 1vh;
+}
+
+input {
+  height: 6vh;
+  padding: 1vh;
+}
 
 .advice {
   border: 1px solid green;
-  height: 100vh;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.advice__quote {
+  border: 3px solid green;
+  border-radius: 1rem 3rem;
+  width: 80%;
+  font-size: 3vh;
+}
+
+.advice__yodish {
+  padding: 5vh;
+}
+
+.advice__yoda {
+  /* border: 1px solid blue; */
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.advice__yoda--img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 600px) {
+  
+  .advice__yoda {
+   width: 30%;
+  }
+
+
+  .advice__yoda--img {
+    max-width: 100%;
+  } 
+
+  .advice__quote {
+    width: 60%;
+    font-size: 3vw;
+  }
+
+
 }
