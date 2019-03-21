@@ -10,7 +10,7 @@ function yodariseAdvice(string) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      let yodish = document.querySelector(".yodish");
+      let yodish = document.querySelector(".advice__yodish");
       let yodishObject = xhr.responseText;
       let yodishString = JSON.parse(yodishObject).yodish;
       if (errorMessage) {
