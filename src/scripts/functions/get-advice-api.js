@@ -8,7 +8,6 @@ function hasResult(obj, cb) {
 }
 
 function randomResult(obj, cb) {
-  // console.log(obj.slip.advice);
   cb(obj.slip.advice);
 }
 
@@ -40,7 +39,7 @@ function getAdvice(string, cb) {
       } else if (xhrObj.hasOwnProperty("total_results")) {
         hasResult(xhrObj, cb);
       } else {
-        randomResult(string, cb);
+        randomResult(xhrObj, cb);
       }
     }
   };
