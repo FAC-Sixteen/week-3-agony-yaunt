@@ -19,7 +19,7 @@ function yodariseAdvice(string) {
       let yodishObject = xhr.responseText;
       console.log(yodishObject);
 
-      let yodishString = JSON.parse(yodishObject);
+      let yodishString = JSON.parse(yodishObject).yodish;
       console.log(yodishString);
 
       yodish.textContent = yodishString;
@@ -30,5 +30,5 @@ function yodariseAdvice(string) {
   xhr.send();
 }
 
-module.exports = yodariseAdvice;
-export { yodariseAdvice };
+// module.exports = yodariseAdvice;
+// export default yodariseAdvice;

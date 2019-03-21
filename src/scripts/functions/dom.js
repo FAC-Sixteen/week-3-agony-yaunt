@@ -1,13 +1,13 @@
-// const yodariser = require("../functions/yodariser.js");
-import { yodariseAdvice } from "../functions/yodariser";
-// const getAdviceApi = require("../functions/get-advice-api.js");
-const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const yodaForm = document.getElementById("yoda-form");
+const yodarise = yodariseAdvice;
+const advice = getAdvice;
 
-const submitButton = document.getElementById("submit-button");
-
-submitButton.addEventListener("click", e => {
-  e.preventDefault;
-  console.log(e);
+yodaForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const input = e.target[0].value;
+  advice(input, string => {
+    console.log(string);
+    yodarise(string);
+  });
+  e.target[0].value = "";
 });
-
-console.log(yodariseAdvice("you are burn the spreadsheets"));
