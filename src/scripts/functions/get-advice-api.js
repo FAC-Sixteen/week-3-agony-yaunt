@@ -8,7 +8,6 @@ function hasResult(obj, cb) {
 }
 
 function randomResult(obj, cb) {
-  // console.log(obj.slip.advice);
   cb(obj.slip.advice);
 }
 
@@ -19,10 +18,7 @@ function noResult(string, cb) {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let xhrObj = JSON.parse(xhr.responseText);
       const result = xhrObj.slip.advice;
-      cb(result);
-      console.log(
-        `No thoughts on ${string}, I have... but hear someone say once, I did: ${result}`
-      );
+      cb(`No thoughts on ${string}, I have... but hear someone say once, I did: ${result}`);
     }
   };
   xhr.open("GET", url, true);
@@ -43,7 +39,7 @@ function getAdvice(string, cb) {
       } else if (xhrObj.hasOwnProperty("total_results")) {
         hasResult(xhrObj, cb);
       } else {
-        randomResult(string, cb);
+        randomResult(xhrObj, cb);
       }
     }
   };
