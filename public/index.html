@@ -43,15 +43,16 @@
   </div>
     </section>
 
-  <section class="form__section">
-    <form id="yoda-form" action="submit">
-      <input type="text" />
-      <button id="submit-button">submit</button>
-    </form>
-    <button id="random-button">random</button>
-  </section>
+    <section class="advice">
+      <div class="form__wrapper">
+          <form class="form" id="yoda-form" action="submit">
+            <input class="form__input" type="text" />
+            <button class="form__button" id="submit-button">submit</button>
+          </form>
+          <button class="form__button" id="random-button">random</button>
+        </div>
 
-  <section class="advice">
+<div class="advice__wrapper">
   <div class="advice__quote">
     <blockquote class="advice__yodish"></blockquote>
   </div>
@@ -62,6 +63,7 @@
     
 
       <blockquote class="yodish"></blockquote>
+    </div>
     </section>
 
     <script src="../src/scripts/functions/get-advice-api.js"></script>
