@@ -24,9 +24,8 @@ The website is live on GitHub pages. Access it using [this link](https://fac-six
 1. brainstormed ideas
 2. selected one final idea and researched the APIs
 3. drew up a mock design and ideal features
-> <img src="./public/assets/mockdesign.png"> 
 4. plotted out the software architecture
-> <img src="./public/assets/architecture.png"> 
+> <img src="./public/assets/figma.png" width="750px">  
 5. second draft of design
 6. made a task list
 7. created initial API functions
@@ -62,4 +61,3 @@ The website is live on GitHub pages. Access it using [this link](https://fac-six
 - page autoscrolls on tick
 
 ---
-![Yoda fighting our trolls](https://media.giphy.com/media/fItgT774J3nWw/giphy.gif)
