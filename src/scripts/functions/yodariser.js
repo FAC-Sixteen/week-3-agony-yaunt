@@ -17,7 +17,6 @@ const yodariseAdvice = (string) => {
         yodishString = `${errorMessage} ${yodishString}`;
       }
       yodish.textContent = yodishString;
-      console.log(yodish.textContent);
     }
   };
   xhr.open("GET", `https://cors-anywhere.herokuapp.com/${url}`);
