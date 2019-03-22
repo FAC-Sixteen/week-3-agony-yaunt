@@ -36,6 +36,7 @@ header {
   color: hsl(50, 100%, 60%);
   background: black;
   z-index: 3;
+  height: 10vh;
 }
 
 header h1 {
@@ -126,11 +127,13 @@ header h2 {
 .form {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .form__label {
   min-width: 320px;
-  margin: 0.5em 0;
+  padding: 0.5em 0;
 }
 
 .form__section {
@@ -153,7 +156,7 @@ header h2 {
 .form__input {
   font-size: inherit;
   background-color: black;
-  padding: 0.25em;
+  padding: 0.25em 0.5em;
   border: 3px solid hsl(50, 100%, 60%);
   border-radius: 1em;
   color: hsl(184, 70%, 50%);
@@ -161,14 +164,15 @@ header h2 {
 }
 
 .advice {
-  width: 100%;
-  background-color: darkolivegreen;
-  background-image: url(./assets/yoda-swamp-background.jpg);
-  min-height: 85vh;
+  background-color: transparent;
 }
 
 .advice__wrapper {
   /* margin-top: 10vh; */
+  width: 100%;
+  background-color: darkolivegreen;
+  background-image: url(./assets/yoda-swamp-background.jpg);
+  min-height: 85vh;
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
@@ -223,6 +227,9 @@ sub {
   margin-left: 1em;
 }
 
+
+
+
 /* Media Queries */
 
 @media (max-width: 810px) {
@@ -272,8 +279,13 @@ sub {
     padding-bottom: 1em;
   }
 
-  .form__wrapper {
-    margin-bottom: 5vh;
+  .advice__wrapper {
+    min-height: 0vh;
+    height: 60vh;
+  }
+
+  .form {
+    height: 25vh;
   }
 }
 
@@ -281,10 +293,32 @@ sub {
   .form__input {
     width: 90vw;
   }
+  header h1 {
+    font-size: 10vw;
+  }
 }
 
 @media (max-width: 400px) {
   header h1 {
     font-size: 10vw;
+  }
+  
+}
+
+@media (max-width: 320px)and (max-height: 568px) {
+  .form {
+    height: 30vh;
+  }
+
+  .advice__quote {
+    font-size: 1.5em;
+  }
+}
+
+
+
+@media (max-width: 320px and max-height: 320px) {
+  .form__label {
+    font-size: 0.5px;
   }
 }
