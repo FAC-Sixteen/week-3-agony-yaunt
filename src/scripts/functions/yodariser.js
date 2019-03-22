@@ -1,18 +1,18 @@
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-function yodariseAdvice(string) {
+const yodariseAdvice = (string) => {
   
-  var errorMessage = string.match(/.*did:/gi);
-  var errorMessageRemoved = string.replace(/.*did:/gi, "");
-  var apiReadyQuote = errorMessageRemoved.replace(/\s/g, "%20");
+  const errorMessage = string.match(/.*did:/gi);
+  let errorMessageRemoved = string.replace(/.*did:/gi, "");
+  let apiReadyQuote = errorMessageRemoved.replace(/\s/g, "%20");
 
-  var url = `http://yoda-api.appspot.com/api/v1/yodish?text=${apiReadyQuote}`;
-  var xhr = new XMLHttpRequest();
+  const url = `http://yoda-api.appspot.com/api/v1/yodish?text=${apiReadyQuote}`;
+  const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      let yodish = document.querySelector(".advice__yodish");
-      let yodishObject = xhr.responseText;
-      let yodishString = JSON.parse(yodishObject).yodish;
+      const yodish = document.querySelector(".advice__yodish");
+      const yodishObject = xhr.responseText;
+      const yodishString = JSON.parse(yodishObject).yodish;
       if (errorMessage) {
         yodishString = `${errorMessage} ${yodishString}`;
       }
