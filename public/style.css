@@ -172,7 +172,7 @@ header h2 {
   width: 100%;
   background-color: darkolivegreen;
   background-image: url(./assets/yoda-swamp-background.jpg);
-  min-height: 85vh;
+  min-height: 75vh;
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
