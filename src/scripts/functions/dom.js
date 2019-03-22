@@ -9,7 +9,6 @@ yodaForm.addEventListener("submit", e => {
   yodaSound.play();
   const input = e.target[0].value;
   advice(input, string => {
-    console.log(string);
     yodarise(string);
   });
   e.target[0].value = "";

@@ -3,7 +3,6 @@
 function hasResult(obj, cb) {
   const max = parseInt(obj.total_results);
   const idNum = max === NaN ? 0 : Math.floor(Math.random() * Math.floor(max));
-  // console.log(obj.slips[idNum].advice);
   cb(obj.slips[idNum].advice);
 }
 
