@@ -13,11 +13,3 @@ yodaForm.addEventListener("submit", e => {
   });
   e.target[0].value = "";
 });
-
-yodaRandom.addEventListener("click", e => {
-  yodaSound.play();
-  const input = "";
-  advice (input, string => {
-    yodarise(string);
-  });
-});
