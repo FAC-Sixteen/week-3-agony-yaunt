@@ -2,7 +2,7 @@
 ## :honeybee: Overview  
 > Created by: @jokosanyang @starsuit @mistapepper @fweddi
 
-<img src="./public/assets/crossover.png" width="400"/>
+![crossover](https://github.com/FAC-Sixteen/week-3-agony-yaunt/blob/master/public/assets/crossover.png?raw=true)
 
 This repo contains our Founders and Coders Week 3 project. After learning about and practicing working with APIs to request information from the internet, we set to work on creating our own web app utilising (at least) two APIs.
 
@@ -25,7 +25,7 @@ The website is live on GitHub pages. Access it using [this link](https://fac-six
 2. selected one final idea and researched the APIs
 3. drew up a mock design and ideal features
 4. plotted out the software architecture
-> <img src="./public/assets/figma.png" width="750px">  
+![figma design](https://github.com/FAC-Sixteen/week-3-agony-yaunt/blob/master/public/assets/figma.png?raw=true) 
 5. second draft of design
 6. made a task list
 7. created initial API functions
@@ -49,6 +49,8 @@ The website is live on GitHub pages. Access it using [this link](https://fac-six
 - what CORS is
 - modular functions
 - effective use of regex .match and .replace methods
+- 3D CSS transforms
+- ![](https://i.imgur.com/iAk8Pw3.gif)
 <!-- - Joko is ALWAYS right. -->
 
 ---
