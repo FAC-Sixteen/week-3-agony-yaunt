@@ -1,18 +1,18 @@
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-function hasResult(obj, cb) {
+const hasResult = (obj, cb) => {
   const max = parseInt(obj.total_results);
   const idNum = max === NaN ? 0 : Math.floor(Math.random() * Math.floor(max));
   cb(obj.slips[idNum].advice);
 }
 
-function randomResult(obj, cb) {
+const randomResult = (obj, cb) => {
   cb(obj.slip.advice);
 }
 
-function noResult(string, cb) {
-  let url = "https://api.adviceslip.com/advice";
-  var xhr = new XMLHttpRequest();
+const noResult = (string, cb) => {
+  const url = "https://api.adviceslip.com/advice";
+  const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let xhrObj = JSON.parse(xhr.responseText);
@@ -24,12 +24,12 @@ function noResult(string, cb) {
   xhr.send();
 }
 
-function getAdvice(string, cb) {
-  let url =
+const getAdvice = (string, cb) => {
+  const url =
     string.length === 0
       ? "https://api.adviceslip.com/advice"
       : `https://api.adviceslip.com/advice/search/${string}`;
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let xhrObj = JSON.parse(xhr.responseText);
