@@ -190,6 +190,27 @@ header h2 {
 .advice__yodish {
   word-wrap: break-word;
   padding: 5vh;
+  position: relative;
+}
+
+.advice__yodish::before {
+  content: "\201C";
+
+  font-size: 3em;
+  padding: 0;
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+}
+
+.advice__yodish::after {
+  content: "\201D";
+
+  font-size: 3em;
+  padding: 0;
+  position: absolute;
+  bottom: -3.5rem;
+  right: 0.5rem;
 }
 
 .advice__yoda {
