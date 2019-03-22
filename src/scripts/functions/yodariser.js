@@ -1,7 +1,7 @@
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 function yodariseAdvice(string) {
-  
+
   var errorMessage = string.match(/.*did:/gi);
   var errorMessageRemoved = string.replace(/.*did:/gi, "");
   var apiReadyQuote = errorMessageRemoved.replace(/\s/g, "%20");
@@ -17,7 +17,6 @@ function yodariseAdvice(string) {
         yodishString = `${errorMessage} ${yodishString}`;
       }
       yodish.textContent = yodishString;
-      console.log(yodish.textContent);
     }
   };
   xhr.open("GET", `https://cors-anywhere.herokuapp.com/${url}`);
