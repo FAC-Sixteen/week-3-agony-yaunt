@@ -12,7 +12,7 @@ const yodariseAdvice = (string) => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       const yodish = document.querySelector(".advice__yodish");
       const yodishObject = xhr.responseText;
-      const yodishString = JSON.parse(yodishObject).yodish;
+      let yodishString = JSON.parse(yodishObject).yodish;
       if (errorMessage) {
         yodishString = `${errorMessage} ${yodishString}`;
       }
